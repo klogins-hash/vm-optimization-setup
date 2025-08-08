@@ -1,0 +1,18 @@
+#!/bin/bash
+# Optimized VNC xstartup configuration
+# Place this file at: ~/.vnc/xstartup
+
+# Load X resources if available
+xrdb $HOME/.Xresources 2>/dev/null || true
+
+# Start clipboard manager for seamless Mac ↔ VM clipboard sharing
+autocutsel -fork
+
+# Set a neutral background
+xsetroot -solid grey
+
+# Fix font rendering
+export LANG=en_US.UTF-8
+
+# Start XFCE4 desktop environment (lightweight and stable)
+startxfce4 &
