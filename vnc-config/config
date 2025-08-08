@@ -1,0 +1,7 @@
+# VNC Server Configuration for Better Quality
+geometry=1920x1080
+depth=24
+dpi=96
+desktop=XFCE4
+alwaysshared=1
+nevershared=0

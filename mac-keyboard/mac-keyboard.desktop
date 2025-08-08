@@ -1,0 +1,8 @@
+[Desktop Entry]
+Type=Application
+Name=Mac Keyboard Layout
+Comment=Apply Mac-style keyboard layout and shortcuts
+Exec=/bin/bash -c 'sleep 3 && xmodmap ~/.Xmodmap && xbindkeys'
+Hidden=false
+NoDisplay=false
+X-GNOME-Autostart-enabled=true

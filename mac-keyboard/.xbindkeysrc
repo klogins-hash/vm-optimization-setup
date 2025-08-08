@@ -1,0 +1,100 @@
+# Mac-style keyboard shortcuts for Linux VM
+# Maps Cmd (Super) key to common Mac shortcuts
+
+# Copy, Cut, Paste, Select All
+"xvkbd -xsendevent -text '\Cc'"
+  m:0x40 + c:54
+  Mod4 + c
+
+"xvkbd -xsendevent -text '\Cx'"
+  m:0x40 + c:53
+  Mod4 + x
+
+"xvkbd -xsendevent -text '\Cv'"
+  m:0x40 + c:55
+  Mod4 + v
+
+"xvkbd -xsendevent -text '\Ca'"
+  m:0x40 + c:38
+  Mod4 + a
+
+# Undo, Redo
+"xvkbd -xsendevent -text '\Cz'"
+  m:0x40 + c:52
+  Mod4 + z
+
+"xvkbd -xsendevent -text '\C\Sz'"
+  m:0x41 + c:52
+  Mod4 + Shift + z
+
+# Find
+"xvkbd -xsendevent -text '\Cf'"
+  m:0x40 + c:41
+  Mod4 + f
+
+# Save
+"xvkbd -xsendevent -text '\Cs'"
+  m:0x40 + c:39
+  Mod4 + s
+
+# New
+"xvkbd -xsendevent -text '\Cn'"
+  m:0x40 + c:57
+  Mod4 + n
+
+# Open
+"xvkbd -xsendevent -text '\Co'"
+  m:0x40 + c:32
+  Mod4 + o
+
+# Print
+"xvkbd -xsendevent -text '\Cp'"
+  m:0x40 + c:33
+  Mod4 + p
+
+# Quit
+"xvkbd -xsendevent -text '\Cq'"
+  m:0x40 + c:24
+  Mod4 + q
+
+# Refresh
+"xvkbd -xsendevent -text '\Cr'"
+  m:0x40 + c:27
+  Mod4 + r
+
+# Bold, Italic, Underline (for text editing)
+"xvkbd -xsendevent -text '\Cb'"
+  m:0x40 + c:56
+  Mod4 + b
+
+"xvkbd -xsendevent -text '\Ci'"
+  m:0x40 + c:31
+  Mod4 + i
+
+"xvkbd -xsendevent -text '\Cu'"
+  m:0x40 + c:30
+  Mod4 + u
+
+# Tab switching
+"xvkbd -xsendevent -text '\Ct'"
+  m:0x40 + c:28
+  Mod4 + t
+
+"xvkbd -xsendevent -text '\C\St'"
+  m:0x41 + c:28
+  Mod4 + Shift + t
+
+# Window management
+"xvkbd -xsendevent -text '\Cw'"
+  m:0x40 + c:25
+  Mod4 + w
+
+# Minimize
+"xvkbd -xsendevent -text '\Cm'"
+  m:0x40 + c:58
+  Mod4 + m
+
+# Hide
+"xvkbd -xsendevent -text '\Ch'"
+  m:0x40 + c:43
+  Mod4 + h

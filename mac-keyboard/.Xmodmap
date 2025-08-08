@@ -1,0 +1,26 @@
+! Mac keyboard layout for Linux VM
+! Swap Alt and Super (Cmd) keys to match Mac layout
+
+! Clear existing modifiers
+clear Mod1
+clear Mod4
+
+! Map keys to match Mac layout
+! Left Alt becomes Super (Cmd)
+! Left Super becomes Alt (Option)
+keycode 64 = Super_L
+keycode 133 = Alt_L
+
+! Right Alt becomes Super (Cmd) 
+! Right Super becomes Alt (Option)
+keycode 108 = Super_R
+keycode 134 = Alt_R
+
+! Set up modifiers properly
+add Mod1 = Alt_L Alt_R
+add Mod4 = Super_L Super_R
+
+! Additional Mac-style mappings
+! Make Caps Lock behave like Ctrl (common Mac preference)
+keycode 66 = Control_L
+add Control = Control_L

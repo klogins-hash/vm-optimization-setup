@@ -20,6 +20,13 @@ chmod +x setup-vnc-server.sh
 ./setup-vnc-server.sh
 ```
 
+### 1b. Mac Keyboard Setup (Optional but Recommended)
+```bash
+# Set up Mac-style keyboard shortcuts
+chmod +x setup-mac-keyboard.sh
+./setup-mac-keyboard.sh
+```
+
 ### 2. Mac Client Setup
 ```bash
 # Install VNC Viewer
@@ -39,13 +46,22 @@ ssh -L 5901:localhost:5901 azureuser@YOUR-VM-IP
 ## Files Included
 
 - `setup-vnc-server.sh` - Automated VNC server installation
-- `vnc-config/xstartup` - Optimized VNC startup configuration
+- `setup-mac-keyboard.sh` - Mac keyboard layout and shortcuts setup
+- `vnc-config/xstartup` - Optimized VNC startup configuration with Mac keyboard support
+- `vnc-config/config` - VNC server configuration for optimal graphics quality
+- `mac-keyboard/` - Mac keyboard configuration files (.xbindkeysrc, .Xmodmap, autostart)
 - `security/ssh-tunnel.sh` - SSH tunnel helper script
 - `vscode-setup.md` - VS Code Remote SSH setup guide
 - `troubleshooting.md` - Common issues and solutions
 - `multi-platform-clients.md` - Client setup for Windows, mobile, etc.
+- `MAC-KEYBOARD-SETUP.md` - Complete Mac keyboard configuration guide
 
 ## Features
+
+✅ **Mac Keyboard Layout**
+- Complete Mac-style keyboard shortcuts (Cmd+C, Cmd+V, etc.)
+- Natural key mapping for Mac users
+- System-wide compatibility
 
 ✅ **Seamless Clipboard Integration**
 - Copy on Mac → Paste in VM

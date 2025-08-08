@@ -1,18 +1,29 @@
 #!/bin/bash
-# Optimized VNC xstartup configuration
-# Place this file at: ~/.vnc/xstartup
+# VNC xstartup script with Mac keyboard support and clipboard integration
 
-# Load X resources if available
-xrdb $HOME/.Xresources 2>/dev/null || true
+# Ensure we have a proper environment
+unset SESSION_MANAGER
+unset DBUS_SESSION_BUS_ADDRESS
 
-# Start clipboard manager for seamless Mac ↔ VM clipboard sharing
-autocutsel -fork
+# Load X resources
+[ -r $HOME/.Xresources ] && xrdb $HOME/.Xresources
 
-# Set a neutral background
+# Set background
 xsetroot -solid grey
+
+# Start clipboard manager for seamless copy/paste
+autocutsel -fork &
+
+# Start dbus session
+eval $(dbus-launch --sh-syntax --exit-with-session)
+
+# Apply Mac keyboard layout and shortcuts
+sleep 2
+xmodmap $HOME/.Xmodmap &
+xbindkeys &
 
 # Fix font rendering
 export LANG=en_US.UTF-8
 
-# Start XFCE4 desktop environment (lightweight and stable)
-startxfce4 &
+# Start XFCE4 session and keep it running
+exec startxfce4
